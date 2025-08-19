@@ -8,6 +8,11 @@ export interface Schedule extends Document {
 
   client: Schema.Types.ObjectId,
   createdBy: Schema.Types.ObjectId,
+  headquarter?: Schema.Types.ObjectId,
   createdAt?: Date,
-  updatedAt?: Date
+  updatedAt?: Date,
+  year: string,
+  month: string,
+  yearOperation?: string,
+  monthOperation?: string
 }

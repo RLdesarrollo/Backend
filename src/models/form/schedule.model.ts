@@ -29,7 +29,28 @@ const scheduleSchema: Schema<Schedule> = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'user',
     required: true
-  }
+  },
+  headquarter: {
+    type: Schema.Types.ObjectId,
+    ref: 'headquarter',
+    required: false
+  },
+  year: {
+    type: String,
+    required: true
+  },
+  month: {
+    type: String,
+    required: true
+  },
+  yearOperation: {
+    type: String,
+    required: false
+  },
+  monthOperation: {
+    type: String,
+    required: false
+  },
 }, configSchema);
 
 export default mongoose.model('schedule', scheduleSchema);

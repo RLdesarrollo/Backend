@@ -15,6 +15,15 @@ const scheduleSchema = z.object({
     .string({ required_error: "El ID del cliente es requerido" }),
   createdBy: z
     .string({ required_error: "El ID del creador es requerido" }),
+  headquarter: z
+    .string({ required_error: "El ID de la sede es requerido" })
+    .optional(),
+  yearOperation: z
+    .string({ required_error: "El año de operación es requerido" })
+    .optional(),
+  monthOperation: z
+    .string({ required_error: "El mes de operación es requerido" })
+    .optional(),
 })
 
 export default scheduleSchema
