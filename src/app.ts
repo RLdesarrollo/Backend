@@ -1,6 +1,7 @@
 import config from "@/utils/config"
 import express from "express"
 import cors from "cors"
+import morgan from "morgan"
 
 //health and user routes
 import userRoutes from "@/routes/user/user.routes"
@@ -29,12 +30,15 @@ import headquarterRoutes from "@/routes/location/headquarter.routes"
 import grupoRoutes from "@/routes/location/grupo.routes"
 import servicioRoutes from "@/routes/location/servicio.routes"
 
+//company routes
+import companyDocumentRoutes from "@/routes/company/companyDocument.routes"
+
 //config express
 const app = express();
 const origin = config.nodeEnv === 'production' ? config.depUrl : config.devUrl;
 app.use(cors({ origin, credentials: true }));
 app.use(express.json()); //allow read json
-
+app.use(morgan('dev'));
 /*--------------------------------------------------auth and user routes--------------------------------------------------*/
 //auth and user routes (messaging and health)
 app.use('/api', userRoutes);
@@ -62,5 +66,8 @@ app.use('/api/location', signatureRoutes);
 app.use('/api/location', headquarterRoutes);
 app.use('/api/location', grupoRoutes);
 app.use('/api/location', servicioRoutes);
+/*--------------------------------------------------company routes--------------------------------------------------*/
+//company routes
+app.use('/api/company', companyDocumentRoutes);
 /*---------------------------------------------------------------------------------------------------------*/
 export default app;
