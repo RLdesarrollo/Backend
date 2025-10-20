@@ -30,9 +30,6 @@ import headquarterRoutes from "@/routes/location/headquarter.routes"
 import grupoRoutes from "@/routes/location/grupo.routes"
 import servicioRoutes from "@/routes/location/servicio.routes"
 
-//company routes
-import companyDocumentRoutes from "@/routes/company/companyDocument.routes"
-
 //config express
 const app = express();
 const origin = config.nodeEnv === 'production' ? config.depUrl : config.devUrl;
@@ -66,8 +63,5 @@ app.use('/api/location', signatureRoutes);
 app.use('/api/location', headquarterRoutes);
 app.use('/api/location', grupoRoutes);
 app.use('/api/location', servicioRoutes);
-/*--------------------------------------------------company routes--------------------------------------------------*/
-//company routes
-app.use('/api/company', companyDocumentRoutes);
 /*---------------------------------------------------------------------------------------------------------*/
 export default app;
