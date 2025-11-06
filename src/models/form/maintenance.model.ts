@@ -36,6 +36,14 @@ const maintenanceSchema: Schema<Maintenance> = new Schema({
     type: Object,
     required: false
   },
+  calibracion: {
+    type: String,
+    requerid: true
+  },
+  frecuenciaCalibracion: {
+    type: String,
+    requerid: true
+  },
 
   //relationship
   curriculum: {

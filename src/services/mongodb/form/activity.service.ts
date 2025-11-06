@@ -19,7 +19,7 @@ class ActivityService extends MongoDB<Activity> implements IResourceService<Acti
       characteristics recommendationsManufacturer inventory
       datePurchase dateInstallation dateOperation acquisition warranty price
       equipClassification typeClassification useClassification biomedicalClassification riskClassification technologyPredominant powerSupply
-      employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance`,
+      employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance calibracion frecuenciaCalibracion`,
       populate: [{
         path: 'office',
         select: 'name group services headquarter inventory',

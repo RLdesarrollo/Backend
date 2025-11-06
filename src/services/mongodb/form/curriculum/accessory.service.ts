@@ -15,7 +15,7 @@ class AccessoryService extends MongoDB<Accessory> {
     characteristics recommendationsManufacturer inventory
     datePurchase dateInstallation dateOperation acquisition warranty price
     equipClassification typeClassification useClassification biomedicalClassification riskClassification technologyPredominant powerSupply
-    employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance`,
+    employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance calibracion frecuenciaCalibracion`,
     populate: {
       path: 'office',
       select: 'name headquarter inventory',

@@ -16,7 +16,7 @@ class MaintenanceService extends MongoDB<Maintenance> implements IResourceServic
     characteristics recommendationsManufacturer inventory
     datePurchase dateInstallation dateOperation acquisition warranty price
     equipClassification typeClassification useClassification biomedicalClassification riskClassification technologyPredominant powerSupply
-    employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance`,
+    employmentMaintenance frequencyMaintenance typeMaintenance manualsMaintenance calibracion frecuenciaCalibracion`,
     populate: [{
       path: 'office',
       select: 'name group services headquarter inventory',

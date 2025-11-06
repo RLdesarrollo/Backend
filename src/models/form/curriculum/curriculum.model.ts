@@ -47,6 +47,8 @@ const curriculumSchema: Schema<Curriculum> = new Schema({
   frequencyMaintenance: { type: String, required: true },
   typeMaintenance: [{ type: String, required: true }],
   manualsMaintenance: [{ type: String, required: true }],
+  calibracion: { type: String, required: true },
+  frecuenciaCalibracion: { type: String, required: true },
 
   //relationship
   office: {

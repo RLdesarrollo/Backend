@@ -4,6 +4,8 @@ export interface Maintenance extends Document {
   dateNextMaintenance: string,
   dateMaintenance: string,
 
+  calibracion: string,
+  frecuenciaCalibracion: string,
   typeMaintenance: string,
   observations: string,
   statusEquipment: string,
